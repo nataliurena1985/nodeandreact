@@ -16,4 +16,8 @@ app.post("/create", (req, res) => {
   const pais = req.body.pais;
   const cargo = req.body.cargo;
   const anios = req.body.anios;
+
+  db.query(
+    "INSERT INTO empleados(nombre,edad,pais,cargo,anios) VALUES (?,?,?,?,?)"
+  );
 });
