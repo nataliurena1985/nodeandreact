@@ -52,7 +52,7 @@ app.get("/empleados", (req, res) => {
         console.log("ERROR DB get", err);
       } else {
         console.log("REGISTRADO DB get");
-        res.send("result");
+        res.send(result);
       }
     }
   );
