@@ -39,13 +39,6 @@ function App() {
 
   return (
     <div className="container">
-      <div className="App">
-        <div className="lista">
-          {empleadosList.map((val, key) => {
-            return <div className="">{val.nombre}</div>;
-          })}
-        </div>
-      </div>
       <div className="card text-center">
         <div class="card-header">GESTION EMPLEADOS</div>
         <div className="card-body">
@@ -135,6 +128,23 @@ function App() {
           </button>
         </div>
       </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Pais</th>
+            <th scope="col">Cargo</th>
+            <th scope="col">Experiencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          {empleadosList.map((val, key) => {
+            return <div className="">{val.nombre}</div>;
+          })}
+        </tbody>
+      </table>
     </div>
   );
 }
