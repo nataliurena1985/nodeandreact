@@ -38,7 +38,7 @@ function App() {
   // getEmpleados();
 
   return (
-    <div class="container">
+    <div className="container">
       <div className="App">
         <div className="lista">
           {empleadosList.map((val, key) => {
@@ -46,59 +46,88 @@ function App() {
           })}
         </div>
       </div>
-      <div class="card text-center">
+      <div className="card text-center">
         <div class="card-header">GESTION EMPLEADOS</div>
-        <div class="card-body">
-          <label>
-            Nombre:
+        <div className="card-body">
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              Nombre:
+            </span>
             <input
+              type="text"
               onChange={(Event) => {
                 setNombre(Event.target.value);
               }}
-              tipe="text"
-            ></input>{" "}
-          </label>
-          <br />
-          <label>
-            Edad:
+              class="form-control"
+              placeholder="Ingrese un Nombre"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              Edad:
+            </span>
             <input
+              type="number"
               onChange={(Event) => {
                 setEdad(Event.target.value);
               }}
-              tipe="number"
-            ></input>{" "}
-          </label>
-          <br />
-          <label>
-            Pais:
+              class="form-control"
+              placeholder="Ingrese una edad"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              Pais:
+            </span>
             <input
+              type="text"
               onChange={(Event) => {
                 setPais(Event.target.value);
               }}
-              tipe="text"
-            ></input>{" "}
-          </label>
-          <br />
-          <label>
-            Cargo:
+              class="form-control"
+              placeholder="Ingrese un pais"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              Cargo:
+            </span>
             <input
+              type="text"
               onChange={(Event) => {
                 setCargo(Event.target.value);
               }}
-              tipe="text"
-            ></input>{" "}
-          </label>
-          <br />
-          <label>
-            Años:
+              class="form-control"
+              placeholder="Ingrese un cargo"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+
+          <div className="input-group mb-3">
+            <span className="input-group-text" id="basic-addon1">
+              Años de experiencia:
+            </span>
             <input
+              type="number"
               onChange={(Event) => {
                 setAnios(Event.target.value);
               }}
-              tipe="number"
-            ></input>{" "}
-          </label>
-          <br />
+              class="form-control"
+              placeholder="Ingrese los años"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+            />
+          </div>
         </div>
         <div class="card-footer text-muted">
           <button className="btn btn-success" onClick={add}>
