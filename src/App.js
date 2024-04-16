@@ -21,7 +21,6 @@ function App() {
   const [empleadosList, setEmpleados] = useState([]);
 
   const add = () => {
-    alert("post");
     Axios.post("http://localhost:3001/create", {
       nombre: nombre,
       edad: edad,
@@ -32,18 +31,26 @@ function App() {
       .then(() => {
         getEmpleados();
         limpiarCampos();
-
         Swal.fire({
           title: "<strong>Registro exitoso!!!</strong>",
           html:
-            "<i>El empleado  <strong>" +
+            "<i>El empleado <strong>" +
             nombre +
             "</strong> fue registrado con éxito!!!</i>",
           icon: "success",
           timer: 3000,
         });
       })
-      .catch((e) => alert(e));
+      .catch(function (error) {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text:
+            JSON.parse(JSON.stringify(error)).message === "Network Error"
+              ? "Intente más tarde"
+              : JSON.parse(JSON.stringify(error)).message,
+        });
+      });
   };
 
   const update = () => {
@@ -70,6 +77,46 @@ function App() {
         });
       })
       .catch((e) => alert(e));
+  };
+
+  const deleteEmple = (val) => {
+    Swal.fire({
+      title: "Confirmar eliminado?",
+      html:
+        "<i>Realmente desea eliminar a <strong>" +
+        val.nombre +
+        "</strong>?</i>",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminarlo!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Axios.delete(`http://localhost:3001/delete/${val.id}`)
+          .then((res) => {
+            getEmpleados();
+            limpiarCampos();
+            Swal.fire({
+              icon: "success",
+              title: val.nombre + " fue eliminado.",
+              showConfirmButton: false,
+              timer: 2000,
+            });
+          })
+          .catch(function (error) {
+            Swal.fire({
+              icon: "error",
+              title: "Oops...",
+              text: "No se logró eliminar el empleado!",
+              footer:
+                JSON.parse(JSON.stringify(error)).message === "Network Error"
+                  ? "Intente más tarde"
+                  : JSON.parse(JSON.stringify(error)).message,
+            });
+          });
+      }
+    });
   };
 
   const limpiarCampos = () => {
@@ -246,7 +293,13 @@ function App() {
                     >
                       Editar
                     </button>
-                    <button type="button" className="btn btn-danger">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        deleteEmple(val);
+                      }}
+                      className="btn btn-danger"
+                    >
                       Eliminar
                     </button>
                   </div>
