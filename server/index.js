@@ -57,3 +57,25 @@ app.get("/empleados", (req, res) => {
     }
   );
 });
+
+app.put("/update", (req, res) => {
+  const id = req.body.id;
+  const nombre = req.body.nombre;
+  const edad = req.body.edad;
+  const pais = req.body.pais;
+  const cargo = req.body.cargo;
+  const anios = req.body.anios;
+  console.log("update");
+  db.query(
+    "UPDATE empleados SET nombre=?,edad=?,pais=?,cargo=?,anios=? WHERE id=?",
+    [nombre, edad, pais, cargo, anios, id],
+    (err, result) => {
+      if (err) {
+        console.log("ERROR DB", err);
+      } else {
+        console.log("put DB");
+        res.send("Empleado actualizado con exito");
+      }
+    }
+  );
+});
