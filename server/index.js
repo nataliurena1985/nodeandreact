@@ -36,7 +36,8 @@ app.post("/create", (req, res) => {
         console.log("ERROR DB", err);
       } else {
         console.log("REGISTRADO DB");
-        res.send("Empleado registrado con exito");
+        // res.send("Empleado registrado con exito");
+        res.send(result);
       }
     }
   );
@@ -74,20 +75,23 @@ app.put("/update", (req, res) => {
         console.log("ERROR DB", err);
       } else {
         console.log("put DB");
-        res.send("Empleado actualizado con exito");
+        // res.send("Empleado actualizado con exito");
+        res.send(result);
       }
     }
   );
 });
 
-app.delete("/delete", (req, res) => {
-  const id = req.body.id;
+app.delete("/delete/:id", (req, res) => {
+  const id = req.params.id;
 
-  db.query("DELETE FROM empleados  WHERE id=?", [id], (err, result) => {
+  db.query("DELETE FROM empleados  WHERE id=?", id, (err, result) => {
     if (err) {
       console.log(err);
     } else {
-      res.send("Empleado eliminado con exito!!!");
+      // res.send("Empleado eliminado con exito!!!");
+
+      res.send(result);
     }
   });
 });
