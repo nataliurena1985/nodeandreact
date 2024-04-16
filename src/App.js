@@ -5,6 +5,8 @@ import Axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Swal from "sweetalert2";
+
+//import Swal from "sweetalert2";
 //const noti = withReactContent(Swal);
 
 function App() {
@@ -30,6 +32,16 @@ function App() {
       .then(() => {
         getEmpleados();
         limpiarCampos();
+
+        Swal.fire({
+          title: "<strong>Registro exitoso!!!</strong>",
+          html:
+            "<i>El empleado  <strong>" +
+            nombre +
+            "</strong> fue registrado con éxito!!!</i>",
+          icon: "success",
+          timer: 3000,
+        });
       })
       .catch((e) => alert(e));
   };
@@ -46,6 +58,16 @@ function App() {
       .then(() => {
         getEmpleados();
         limpiarCampos();
+
+        Swal.fire({
+          title: "<strong>Actualización exitosa!!!</strong>",
+          html:
+            "<i>El empleado <strong>" +
+            nombre +
+            "</strong> fue actualizado con éxito!!!</i>",
+          icon: "success",
+          timer: 3000,
+        });
       })
       .catch((e) => alert(e));
   };
