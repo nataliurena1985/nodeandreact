@@ -79,3 +79,15 @@ app.put("/update", (req, res) => {
     }
   );
 });
+
+app.delete("/delete", (req, res) => {
+  const id = req.body.id;
+
+  db.query("DELETE FROM empleados  WHERE id=?", [id], (err, result) => {
+    if (err) {
+      console.log(err);
+    } else {
+      res.send("Empleado eliminado con exito!!!");
+    }
+  });
+});
