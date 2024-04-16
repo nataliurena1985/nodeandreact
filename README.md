@@ -1,15 +1,29 @@
-# Mi tienda de Helados
+# Getting Started with Create React App
 
 ### react y node.
 
 ![](https://res.cloudinary.com/dv6nijgvd/image/upload/v1685584987/ecomerce/Cremas_pwicxc.png)
 
 [LinkecomerceHelados](https://comision-432401.vercel.app/)
+[LinkeSweetAlert](https://sweetalert2.github.io/#examples)
+[LinkGIT](https://github.com/nataliurena1985/nodeandreact.git)
+[LinkecomerceHelados](https://comision-432401.vercel.app/)
 
 #### para clonar el proyecto ejecutar el siguiente codigoi
 
 ```
-git clone [project url]
+
+CLIENT
+npm start
+
+
+SERVER
+
+node index.js
+
+
+para volver  
+control c
 ```
 
 ```javascript
