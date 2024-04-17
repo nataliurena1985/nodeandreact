@@ -2,7 +2,7 @@
 
 ### react y node.
 
-![](https://res.cloudinary.com/dv6nijgvd/image/upload/v1685584987/ecomerce/Cremas_pwicxc.png)
+![](https://res.cloudinary.com/dv6nijgvd/image/upload/v1713318611/nodeANDreact/qk1jz4e8zwp6vi1wy11a.png)
 
 [LinkecomerceHelados](https://comision-432401.vercel.app/)
 [LinkeSweetAlert](https://sweetalert2.github.io/#examples)
