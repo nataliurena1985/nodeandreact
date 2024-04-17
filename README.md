@@ -9,10 +9,24 @@
 [LinkGIT](https://github.com/nataliurena1985/nodeandreact.git)
 [LinkecomerceHelados](https://comision-432401.vercel.app/)
 
-#### para clonar el proyecto ejecutar el siguiente codigoi
+#### para el back y el front
 
 ```
+PARA CREAR LAS CARPETAS
+mkdir client
+mkdir server
 
+
+server  npm install cors
+        npm install
+
+
+client   
+         npm install react bootstrap
+         npm install 
+         
+
+ PARA CORRER
 CLIENT
 npm start
 
