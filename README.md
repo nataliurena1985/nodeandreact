@@ -7,7 +7,7 @@
 [LinkecomerceHelados](https://comision-432401.vercel.app/)
 [LinkeSweetAlert](https://sweetalert2.github.io/#examples)
 [LinkGIT](https://github.com/nataliurena1985/nodeandreact.git)
-[LinkecomerceHelados](https://comision-432401.vercel.app/)
+[LinkeYOUTUBE](https://www.youtube.com/watch?v=U1u2jNYXmBw)
 
 #### para el back y el front
 
@@ -21,10 +21,10 @@ server  npm install cors
         npm install
 
 
-client   
+client
          npm install react bootstrap
-         npm install 
-         
+         npm install
+
 
  PARA CORRER
 CLIENT
@@ -36,7 +36,7 @@ SERVER
 node index.js
 
 
-para volver  
+para volver
 control c
 ```
 
