@@ -25,6 +25,9 @@ client
          npm install react bootstrap
          npm install
 
+MySQL
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+
 
  PARA CORRER
 CLIENT
