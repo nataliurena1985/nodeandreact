@@ -1,15 +1,17 @@
-# Getting Started with Create React App
+# Aplicacion CRUD con node y react
 
-### react y node.
+Se realiza un formulario realizado en react el envia los datos mediante Node y los guarda en la base de datos y lo muestra  en una tabla.
+
+### Ejemlo de formulario de  ABM
 
 ![](https://res.cloudinary.com/dv6nijgvd/image/upload/v1713318611/nodeANDreact/qk1jz4e8zwp6vi1wy11a.png)
 
-[LinkecomerceHelados](https://comision-432401.vercel.app/)
+[LinkeCRUD](https://comision-432401.vercel.app/)
 [LinkeSweetAlert](https://sweetalert2.github.io/#examples)
 [LinkGIT](https://github.com/nataliurena1985/nodeandreact.git)
 [LinkeYOUTUBE](https://www.youtube.com/watch?v=U1u2jNYXmBw)
 
-#### para el back y el front
+####COMANDOS para el back y el front
 
 ```
 PARA CREAR LAS CARPETAS
